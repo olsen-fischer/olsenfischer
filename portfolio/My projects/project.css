@@ -144,11 +144,10 @@ div.gallery{
 
 /* pop up page */
 
-.pop-container {
+.pop-container{
   
     position: absolute;
-    /* height: 100%; */
-    display: none;
+    display:none;
     width: 100%;
     padding-top: 20px;
     top: 0;
@@ -158,10 +157,31 @@ div.gallery{
     justify-content: center;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.75);
+    background: var(--other-color);
 
 }
-.pop-container .pop-gallary {
+.popcontainer1{
+  position: absolute;
+  display: none;
+  width: 100%;
+  padding-top: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--other-color);
+  text-align: center;
+}
+.popcontainer1 h2 {
+  color: var(--text-color);
+  padding: 20px;
+}
+.popcontainer1 h2 span{
+  color: var(--main-color);
+}
+
+
+.popcontainer1  .popgallary {
   
   display: flex;
   gap: 10px;
@@ -172,7 +192,41 @@ div.gallery{
   background: var(--second-bg-color);
   border-radius: 10px;
 }
+.pop-container  .pop-gallary {
+  
+  display: flex;
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+  max-width: 1223px;
+  padding: 40px;
+  background: var(--second-bg-color);
+  border-radius: 10px;
+}
+.popcontainer1 .popgallary{
+  display: flex;
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+  max-width: 1223px;
+  padding: 40px;
+  background: var(--second-bg-color);
+  border-radius: 10px;
+}
+
 .pop-gallary span {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: var(--bg-color);
+  background: var(--main-color);
+  cursor: pointer;
+}
+.popgallary span {
   position: fixed;
   top: 40px;
   right: 40px;

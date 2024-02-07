@@ -13,9 +13,29 @@ $('.button-group .button').on('click', function(){
     })
 }) 
 
-document.getElementById("design").addEventListener("click", function(){
-    document.querySelector(".pop-container").style.display="block";
-})
-document.querySelector(".close").addEventListener("click", function(){
-    document.querySelector(".pop-container").style.display="none";
-})
+document.getElementById("design").addEventListener("click", function () {
+    togglePopContainer(".pop-container");
+});
+
+document.getElementById("designs").addEventListener("click", function () {
+    togglePopContainer(".popcontainer1");
+});
+
+document.querySelectorAll(".close").forEach(function (closeButton) {
+    closeButton.addEventListener("click", function () {
+        togglePopContainer(".pop-container");
+    });
+});
+
+document.querySelectorAll(".closed").forEach(function (closeButton) {
+    closeButton.addEventListener("click", function () {
+        togglePopContainer(".popcontainer1");
+    });
+});
+
+function togglePopContainer(popContainerSelector) {
+    var popContainer = document.querySelector(popContainerSelector);
+    if (popContainer) {
+        popContainer.style.display = (popContainer.style.display === "block") ? "none" : "block";
+    }
+}
